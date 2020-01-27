@@ -1,2 +1,3 @@
-# chen3201_recitations
-Scripts from UMN CHEN3201 recitations
+# CHEN3201 Recitations examples
+
+In this reporsitory you can find scripts from then UMN CHEN3201 recitations.

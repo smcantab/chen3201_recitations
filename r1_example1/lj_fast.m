@@ -3,7 +3,7 @@ function [energy] = lj_fast(a, b)
     % from the Lennard-Jones interaction potential. It is fast because it
     % avoids square roots and uses fewer multiplications
     % Input: row vectors a, b
-    % Output: scalar r
+    % Output: scalar energy
     ir2 = idistance2(a, b);
     ir6 = ir2 * ir2 *ir2;
     ir12 = ir6 * ir6;

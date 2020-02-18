@@ -2,4 +2,4 @@
 
 In this reporsitory you can find scripts from then UMN CHEN3201 recitations.
 
-Tiny URL: [tinyurl.com/chen3201]
+Tiny URL: [tinyurl.com/chen3201](tinyurl.com/chen3201)

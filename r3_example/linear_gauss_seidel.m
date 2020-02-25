@@ -28,7 +28,7 @@ while err > tol
     end
     % compute error and display on screen
     err = norm(x-xold); 
-    fprintf('jacobi solver k = %3d \t err = %6.4e \n', count, err)
+    fprintf('Gauss-Seidel solver k = %3d \t err = %6.4e \n', count, err)
 end
 
 end

@@ -1,6 +1,6 @@
 clear;clc
 
-getf = @(x) x^2 - 3*x + 2;
+getf= @(x) x^2 - 3*x + 2;
 
 xinit = [-0.1 0.6 1.99 2.01];
 tol = 1e-8;

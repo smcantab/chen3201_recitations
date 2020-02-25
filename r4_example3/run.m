@@ -3,7 +3,7 @@ clear;clc
 getf = @(x) sin(pi*x);
 getdf = @(x) pi*cos(pi*x);
 
-xinit = linspace(0, 2, 401);
+xinit = linspace(0, 2, 201);
 roots = zeros(length(xinit), 1);
 success = zeros(length(xinit), 1);
 tol = 1e-10;

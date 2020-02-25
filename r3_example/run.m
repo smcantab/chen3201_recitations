@@ -10,7 +10,7 @@ linear_jacobi(A, b, x, 1e-8)
 A = [2 1; 1 -2];
 linear_gauss_seidel(A, b, x, 1e-8)
 
-% test that sovlers fail for non diagonally dominant systems
+% test that solvers fail for non diagonally dominant systems
 try
     A = [2 1; 1 0];
     linear_jacobi(A, b, x, 1e-8);

@@ -19,7 +19,7 @@ while norm(R) > tol
          break
      end
 end
-disp(x)
+
 if k > kmax || max(x) == Inf || min(x) == -Inf
     success = 0;
 else

@@ -3,29 +3,35 @@ close all
 
 n = 151;
 dx = 1/(n-1);
-C = pde_solve(n);
+Csol = pde_solve(n);
 
+fprintf('Unpacking the results.\n')
 %unpack for plotting
 c = zeros(n,n);
 x = zeros(n,n);
 y = zeros(n,n);
-for j = 1:n
-    for i = 1:n
-        k = i + (j-1)*n;
-        c(i,j) = C(k);
-        x(i,j) = (i-1)*dx;
-        y(i,j) = (j-1)*dx;
+for i = 1:n
+    for j = 1:n
+        k = (i-1)*n + j;
+        c(i,j) = Csol(k);
+        x(i,j) = (j-1)*dx;
+        y(i,j) = (i-1)*dx;
     end
 end
+fprintf('\t Finished in t = %10.4f seconds.\n\n',toc)
 
 %plot the concentration
 h = figure;
-%mesh(x,y,c)
-surface(x,y,c)
-view(3)
+mesh(x,y,c)
 xlabel('x','FontSize',14)
 ylabel('y','FontSize',14)
 zlabel('c','FontSize',14)
+
+%plot the boundary concentration
+h = figure;
+plot(x(1,:),c(1,:),'-ok')
+xlabel('x','FontSize',14)
+ylabel('c(x,0)','FontSize',14)
 
 function C = pde_solve(n)
 %setup grid

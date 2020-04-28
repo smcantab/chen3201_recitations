@@ -3,7 +3,7 @@ close all
 
 n = 101;
 dx = 1/(n-1);
-C = pde_solve(n);
+Csol = pde_solve(n);
 
 %unpack for plotting
 c = zeros(n,n);
@@ -12,7 +12,7 @@ y = zeros(n,n);
 for j = 1:n
     for i = 1:n
         k = i + (j-1)*n;
-        c(i,j) = C(k);
+        c(i,j) = Csol(k);
         x(i,j) = (i-1)*dx;
         y(i,j) = (j-1)*dx;
     end

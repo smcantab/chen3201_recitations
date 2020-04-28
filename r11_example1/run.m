@@ -8,9 +8,9 @@ y0(1) = 1;
 x = linspace(0, 1, nodes);
 
 %parameters
-h = 1e-5;
+h = 1e-4;
 t0 = 0;
-tfinal = 1e-3;
+tfinal = 1e-1;
 nsteps = fix((tfinal-t0)/h);
 iout = 1;
 
@@ -27,9 +27,9 @@ for k=1:kmax
 end
 
 figure
-plot(x, yout(nsteps, :), 'k-', x, c_ex(10, :), 'k--')
+plot(x, yout(nsteps, :), 'k-', x, c_ex(100, :), 'k--')
 xlabel('Position, x','FontSize',14)
-legend('Numerical solution at t_f 0.01','Analytical solution (k=10) at t_f 0.01') 
+legend('Numerical solution at t_f 0.01','Analytical solution (k=100) at t_f 0.01') 
 ylabel('Concentration, c','FontSize',14)
 
 figure
